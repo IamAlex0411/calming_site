@@ -1,0 +1,80 @@
+/* Scenery */
+.scenery{
+  background-color: #B5EAEA;
+  padding-top: 50px;
+  padding-bottom: 0;
+  height: 1000px; width: 1900px; overflow: hidden;
+  position: relative;
+}
+
+.sun, .land{
+  text-align: center;
+  margin-left: 600px;
+  margin-right: 200px;
+}
+
+.sun{
+  animation: 5s ease-out 2s 1 sunMove alternate;
+  animation-iteration-count:infinite;
+}
+
+.cloud1{
+  animation: 2s ease-out 0.1s 1 slideInFromRight;
+    animation-fill-mode: forwards;
+
+  position: absolute;
+  right: 600px;
+
+  z-index: 2;
+}
+
+.cloud2{
+  animation: 2s ease-out 0.1s 1 slideInFromLeft;
+    animation-fill-mode: forwards;
+
+  position: absolute;
+  right: 1000px;
+  bottom: 600px;
+
+  z-index: 2;
+}
+
+.land{
+  width: 1000px;
+}
+
+@keyframes slideInFromRight {
+    100% {
+        transform: translateX(60%);
+    }
+}
+
+@keyframes slideInFromLeft {
+    100% {
+        transform: translateX(-60%);
+    }
+}
+
+@keyframes sunMove {
+  0% {
+    transform: translateX(0);
+  }
+
+  100%{
+    transform: translateY(-13%);
+  }
+}
+
+/* Phone/Other Resolutions */
+
+@media (max-width: 500px){
+  .scenery{
+    height: 876px; width: 500px; overflow: hidden;
+    margin-bottom: 0px;
+  }
+
+  .sun, .land{
+    text-align: center;
+    margin-left: 0;
+  }
+}

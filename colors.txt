@@ -1,0 +1,3 @@
+sky: #B5EAEA
+under sky: #C9E4C5
+text: #8675A9
